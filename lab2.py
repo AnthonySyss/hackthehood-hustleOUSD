@@ -16,17 +16,7 @@ used_python = True//False
 hobbies = ["gaming","playing sports","food"]
 
 ## Step 6
-favorite_things = {"show": "SnowFall", "food": "Sushi",}
-
-
-
-
-
-
-
-
-
-
+favorite_things = {"show": "SnowFall", "food": "Sushi"}
 
 
 
