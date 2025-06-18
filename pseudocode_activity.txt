@@ -1,0 +1,7 @@
+ Set Alarm time = 1000
+1. Alaram does not = Current time, wait for alarm time = Current time
+2. If Alarm time = Current time, Alarm sound rings
+    2a. Ask user to Snooze or Stop 
+        2a.1. If user picks snooze, snooze for 5 mintues before ringing alarm again and asking user to Snooze or Stop
+(Cycle)
+        2a.2. If user picks stop, end program (ends here)
