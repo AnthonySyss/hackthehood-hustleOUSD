@@ -5,7 +5,7 @@ menu = {
     "Cheese": 0.59,
     "Ice cream": 1.49,
     "Churro": 0.79,
-    "Soda": 0.89
+    "Sod3a": 0.89
 }
 
 def total_price(item1, item2):
@@ -59,12 +59,11 @@ def deflation(item1, multi):
 
 print("Updated menu after deflation:", deflation("Pizza", 1.1))
 
-def items_with_99_cents():
-    result = []
-    for item, price in menu.items():
-        price_str = f"{price:.2f}"
-        if price_str.endswith(".99"):
-            result.append(item)
-    return result
+def price_after_tax(item1, tax):
+    if item1 in menu:
+        final_price = menu[item1]*tax+menu[item1]
+        return f"The Final Price of {item1} after tax is ${final_price}"
+    else:
+        return f"{item1} is not on the menu."
 
-print("Items with 99 cents:", items_with_99_cents())
+print("Updated price after tax:", price_after_tax("Pizza", .05))
