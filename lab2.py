@@ -10,7 +10,7 @@ nickname = 'Ant'
 age = 16.0
 
 ## Step 4
-used_python = True//False
+used_python = True
 
 ## Step 5
 hobbies = ["gaming","playing sports","food"]
