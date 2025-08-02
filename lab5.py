@@ -13,7 +13,7 @@ def generate_superhero_power():
 def generate_superhero_power1():
     power = "Flying"
     return power
-print(generate_superhero_power1)
+print("generate_superhero_power1")
 
 #Task 4
 def generate_superhero_power2(user_name, super_power):
