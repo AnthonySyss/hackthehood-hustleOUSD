@@ -26,13 +26,14 @@ def move(self, direction):
 
 def take_item(self, item_name):
     """Add an item to inventory"""
-    if self.current_room.remove_item(item_name):
-        self.inventory.append(item_name)
-        print(f"You picked up {item_name}.")
-        return True
-    else:
-        print(f"No {item_name} here.")
-        return False
+    if self.current_room:
+        item = self.current_room.remove_item(item_name)
+        if item:
+            self.inventory.append(item)
+            print(f"You picked up {item.name}.")
+            return True
+    print(f"No {item_name} here.")
+    return False
                 
     
     def use_item(self, item_name, item_use):
