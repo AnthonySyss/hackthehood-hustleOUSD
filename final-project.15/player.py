@@ -6,32 +6,33 @@ import random
 class Player:
     """Represents the player character."""
         
-    def __init__(self, name):
+    def __init__(self, name, starting_room=None):
         """Required attributes, as well as any additional ones"""
         self.name = name
         self.health = 100
         self.inventory = []
+        self.current_room = starting_room
         
         
-    def move(self, direction, forward, back):
-        """Move to a different room"""
-        next_room = current_room.get_exit(direction)
-        if next_room:
-            return next_room
-        else:
-            print("You can't go that way.")
-            return current_room
+def move(self, direction):
+    """Move to a different room"""
+    next_room = self.current_room.get_exit(direction)
+    if next_room:
+        self.current_room = next_room
+        return next_room
+    else:
+        print("You can't go that way.")
+        return self.current_room
 
-
-    def take_item(self, item_name):
-        """Add an item to inventory"""
-        if current_room.remove_item(item_name):
-            self.inventory.append(item_name)
-            print(f"You picked up {item_name}.")
-            return True
-        else:
-            print(f"No {item_name} here.")
-            return False
+def take_item(self, item_name):
+    """Add an item to inventory"""
+    if self.current_room.remove_item(item_name):
+        self.inventory.append(item_name)
+        print(f"You picked up {item_name}.")
+        return True
+    else:
+        print(f"No {item_name} here.")
+        return False
                 
     
     def use_item(self, item_name, item_use):
